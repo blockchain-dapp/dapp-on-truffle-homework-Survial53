@@ -31,6 +31,7 @@ App = {
     {
       // Instantiate a new truffle contract from the artifact
       App.contracts.Election = TruffleContract(election);
+      
       // Connect provider to interact with contract
       App.contracts.Election.setProvider(App.web3Provider);
       App.listenForEvents();
@@ -64,7 +65,7 @@ App = {
    
     loader.show();
     content.hide();
-
+    
     // Load account data
     web3.eth.getCoinbase(function (err, account) 
     {
@@ -84,7 +85,6 @@ App = {
     {
       var candidatesResults = $("#candidatesResults");
       candidatesResults.empty();
-      
       var candidatesSelect = $('#candidatesSelect');
       candidatesSelect.empty();
 
@@ -137,7 +137,6 @@ App = {
       console.error(err);
     });
   }
-
 };
 
 $(function () 
